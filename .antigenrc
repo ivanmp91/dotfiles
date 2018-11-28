@@ -1,0 +1,8 @@
+antigen use oh-my-zsh
+
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen apply
