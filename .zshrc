@@ -23,7 +23,7 @@ cd -
 clear
 
 # Useful aliases
-alias kpush='file=$(tempfile) && cp $KUBECONFIG $file && export PUSHED_KUBECONFIG=$KUBECONFIG && export KUBECONFIG=$file'
+alias kpush='file=$(mktemp) && cp $KUBECONFIG $file && export PUSHED_KUBECONFIG=$KUBECONFIG && export KUBECONFIG=$file'
 alias kpop='export KUBECONFIG=$PUSHED_KUBECONFIG'
 alias terraform='docker run -v ~/.terraform:/root/.terraform -v ~/.terraform.d:/root/.terraform.d -v `pwd`:/docker -v ~/.config:/root/.config -w /docker --rm -it hashicorp/terraform:0.11.10'
 
@@ -42,6 +42,4 @@ SPACESHIP_TIME_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
 SPACESHIP_TIME_FORMAT=false
 SPACESHIP_TIME_12HR=false
 SPACESHIP_TIME_COLOR="yellow"
-
-# Export binaries
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
