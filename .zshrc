@@ -1,9 +1,6 @@
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then source "$HOME/google-cloud-sdk/path.zsh.inc" ; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f "/Users/ivan.mora/google-cloud-sdk/completion.zsh.inc" ]; then source '/Users/ivan.mora/google-cloud-sdk/completion.zsh.inc'; fi
-
 # Initialize antigen
 if [[ -f $HOME/.zsh/antigen.zsh ]]; then
     source $HOME/.zsh/antigen.zsh
@@ -42,5 +39,5 @@ SPACESHIP_TIME_12HR=false
 SPACESHIP_TIME_COLOR="yellow"
 
 # Path configuration
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:$HOME/bin:/usr/local/opt/mysql-client/bin:/usr/local/opt/gnu-getopt/bin
